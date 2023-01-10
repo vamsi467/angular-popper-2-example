@@ -1,0 +1,15 @@
+<span
+  #bt
+  aria-describedby="tooltip"
+  (mouseenter)="show()"
+  (focus)="show()"
+  (blur)="hide()"
+  (mouseleave)="hide()"
+>
+  <ng-content select="[target]"></ng-content>
+</span>
+
+<div id="tooltip" #tooltip role="tooltip">
+  <ng-content select="[content]"></ng-content>
+  <div id="arrow" data-popper-arrow></div>
+</div>
